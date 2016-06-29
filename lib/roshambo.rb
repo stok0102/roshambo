@@ -6,6 +6,8 @@ class String
       true
     elsif self == 'scissors' && player2 == 'paper'
       true
+    else
+      false  
     end
   end
 end
