@@ -7,6 +7,9 @@ set(:show_exceptions, false)
 describe('the beats case path', {:type => :feature}) do
   it('compares player_one move with player_two and declares winner') do
     visit('/')
+    choose('playerTwo')
+    click_button('Go')
+    visit('/form_two')
     fill_in('player_one', :with => 'rock')
     fill_in('player_two', :with => 'paper')
     click_button('Play')

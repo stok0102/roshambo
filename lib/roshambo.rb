@@ -7,7 +7,15 @@ class String
     elsif self == 'scissors' && player2 == 'paper'
       true
     else
-      false  
+      false
     end
+  end
+end
+
+class String
+  define_method(:computer) do
+    computer_choice = {1 => 'rock', 2 => 'paper', 0 => 'scissors'}
+    shoot = rand(3)
+    computer_choice.fetch(shoot)
   end
 end
